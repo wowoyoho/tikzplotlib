@@ -15,7 +15,7 @@ def draw_legend(data, obj):
 
     # Get the location.
     # http://matplotlib.org/api/legend_api.html
-    loc = obj._loc if obj._loc != 0 else _get_location_from_best(obj)
+    loc = obj._loc if obj._loc != 0 else _get_location_from_best(obj) 
     pad = 0.03
     position, anchor = {
         1: (None, None),  # upper right
@@ -78,8 +78,8 @@ def draw_legend(data, obj):
     if alignment:
         data["current axes"].axis_options.append(f"legend cell align={{{alignment}}}")
 
-    if obj._ncol != 1:
-        data["current axes"].axis_options.append(f"legend columns={obj._ncol}")
+    if obj._ncols != 1:
+        data["current axes"].axis_options.append(f"legend columns={obj._ncols}")
 
     # Write styles to data
     if legend_style:
